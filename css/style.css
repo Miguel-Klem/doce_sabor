@@ -6,7 +6,7 @@
     --cor-branca: #FFFFFF;
 }
 
-/* Reset básico */
+/* Reset */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -20,13 +20,11 @@ body {
     line-height: 1.6;
 }
 
-/* 1. Header Fixo e Vidro Fosco (Glassmorphism) */
+/* Header Fixo e Vidro Fosco */
 header {
     position: sticky;
     top: 0;
-    /* Fundo translúcido */
     background-color: rgba(255, 253, 208, 0.7); 
-    /* Filtro de desfoque */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     z-index: 100;
@@ -62,10 +60,20 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* 2. Grid do Cardápio */
+/* Formatação e Ajuste das Imagens */
+.bolo-mes img,
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+
+/* Grid do Cardápio */
 .cardapio {
     display: grid;
-    /* 3 Colunas no Desktop */
     grid-template-columns: 1fr 1fr 1fr;
     gap: 16px;
 }
@@ -78,12 +86,11 @@ h2 {
 }
 
 .destaque {
-    /* Ocupa da primeira até a última linha (todas as colunas) */
     grid-column: 1 / -1; 
     background-color: var(--cor-rosa);
 }
 
-/* Estilização de Detalhes (FAQ) */
+/* Estilização de Detalhes */
 details {
     background-color: var(--cor-creme);
     padding: 10px 15px;
@@ -133,7 +140,7 @@ fieldset label {
     margin-left: 5px;
 }
 
-/* 3. Botão com Transição e Hover */
+/* Botão com Transição e Hover */
 .btn-pedido {
     display: block;
     width: 100%;
@@ -146,12 +153,10 @@ fieldset label {
     padding: 15px;
     border-radius: 5px;
     cursor: pointer;
-    /* Prepara a suavidade da animação */
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .btn-pedido:hover {
-    /* Cresce o botão suavemente */
     transform: scale(1.05);
     background-color: #ff9eaa;
 }
@@ -175,10 +180,9 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* 4. Media Query para Celulares */
+/* Media Query para Celulares */
 @media (max-width: 768px) {
     .cardapio {
-        /* Passa a ter 1 coluna em telas menores que 768px */
         grid-template-columns: 1fr;
     }
 }

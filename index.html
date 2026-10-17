@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doce Sabor</title>
-    <!-- Ligação correta com o arquivo dentro da pasta css -->
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     
-    <!-- Cabeçalho com Glassmorphism (feito no CSS) -->
+    <!-- Cabeçalho com Glassmorphism -->
     <header>
         <h1>Doce Sabor</h1>
         <p>A melhor confeitaria do seu bairro!</p>
@@ -21,35 +20,41 @@
             <article class="bolo-mes">
                 <h2>Bolo do mês</h2>
                 <h3>Bolo de pote de Ninho com morango</h3>
-                <p><strong>Válido até 31 de outubro</strong></p>
+                <img src="/img/bolo-no-pote-de-leite-ninho-com-morango.jpg" alt="Bolo de pote de Ninho com morango">
+                <p><strong>Válido até 21 de outubro</strong></p>
             </article>
         </section>
 
-        <!-- Cardápio usando CSS Grid -->
+        <!-- Cardápio -->
         <section class="secao-padrao">
             <h2>Nosso Cardápio</h2>
             <div class="cardapio">
                 <article class="card">
+                    <img src="/img/bolo_chocolate.jpg" alt="Bolo de Chocolate">
                     <h3>Bolo de Chocolate</h3>
-                    <p>O clássico com cobertura especial belga.</p>
+                    <p>O clássico com confeitagem especial.</p>
                 </article>
                 <article class="card">
+                    <img src="/img/bolo_morango.jpg" alt="Bolo de Morango">
                     <h3>Bolo de Morango</h3>
                     <p>Massa fofinha e muito recheio fresco.</p>
                 </article>
                 <article class="card">
+                    <img src="/img/bolo_cenoura.jpg" alt="Bolo de Cenoura">
                     <h3>Bolo de Cenoura</h3>
                     <p>Com bastante brigadeiro derretido.</p>
                 </article>
+
                 <!-- Destaque que ocupa todas as colunas -->
                 <article class="card destaque">
+                    <img src="/img/kit_festa.jpg" alt="Kit Festa completo">
                     <h3>Kit Festa</h3>
                     <p>Bolo + Docinhos + Salgados. O pacote completo para sua festa!</p>
                 </article>
             </div>
         </section>
 
-        <!-- Perguntas Frequentes (Sem JS) -->
+        <!-- Perguntas Frequentes -->
         <section class="secao-padrao">
             <h2>Perguntas Frequentes</h2>
             <details>
@@ -84,7 +89,7 @@
                 <label for="data_retirada">Data de retirada:</label>
                 <input type="date" id="data_retirada" name="data_retirada" required>
 
-                <!-- Fieldset para os radio buttons (mesmo name) -->
+                <!-- Fieldset para os radio buttons -->
                 <fieldset>
                     <legend>Forma de recebimento:</legend>
                     <input type="radio" id="retirar_loja" name="recebimento" value="loja" required>
@@ -101,7 +106,6 @@
         <!-- Mapa -->
         <section class="secao-padrao">
             <h2>Onde Estamos</h2>
-            <!-- Iframe com o atributo title para acessibilidade -->
             <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d233875.61119158383!2d-47.099441705468706!3d-23.664997399999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce53ceac17f93b%3A0x3546a122a212c20e!2sDoce%20Sabor%20Confeitaria%20A!5e0!3m2!1spt-BR!2sbr!4v1792253892923!5m2!1spt-BR!2sbr" 
                 width="100%" 
@@ -114,7 +118,7 @@
         </section>
     </main>
 
-    <!-- Rodapé Semântico com Contatos Especiais -->
+    <!-- Rodapé -->
     <footer>
         <address>
             <p>&copy; 2026 Doce Sabor</p>

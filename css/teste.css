@@ -1,30 +1,52 @@
+/* Questão 10: Paleta de cores com variáveis CSS e aplicação no body */
 :root {
-    --cor-rosa: #FFB6C1;
-    --cor-marrom: #5C4033;
-    --cor-creme: #FFFDD0;
+    --rosa: #FFB6C1;
+    --marrom: #5C4033;
+    --creme: #FFFDD0;
 }
 
 body {
-    background-color: var(--cor-creme);
-    color: var(--cor-marrom);
+    background-color: var(--creme);
+    color: var(--marrom);
+    font-family: sans-serif;
+    margin: 20px;
 }
 
+/* Questão 12 (a): Header grudado no topo com vidro fosco */
 header {
     position: sticky;
     top: 0;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 253, 208, 0.8);
     backdrop-filter: blur(10px);
-    z-index: 100;
+    padding: 10px;
 }
 
+/* Questão 11: Grid do Cardápio, fr, gap, grid-column e Media Query */
+.cardapio {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+}
+
+.destaque {
+    grid-column: 1 / -1;
+}
+
+@media (max-width: 768px) {
+    .cardapio {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Questão 12 (b): Botão com fundo rosa, transição e crescimento suave (scale) */
 .btn-pedido {
-    background-color: var(--cor-rosa);
+    background-color: var(--rosa);
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s;
 }
 
 .btn-pedido:hover {
-    transform: scale(1.1); 
+    transform: scale(1.1);
 }
