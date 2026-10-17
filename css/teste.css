@@ -1,0 +1,30 @@
+:root {
+    --cor-rosa: #FFB6C1;
+    --cor-marrom: #5C4033;
+    --cor-creme: #FFFDD0;
+}
+
+body {
+    background-color: var(--cor-creme);
+    color: var(--cor-marrom);
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+
+.btn-pedido {
+    background-color: var(--cor-rosa);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.btn-pedido:hover {
+    transform: scale(1.1); 
+}

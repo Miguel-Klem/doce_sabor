@@ -1,0 +1,184 @@
+/* Paleta de Cores usando Variáveis CSS */
+:root {
+    --cor-rosa: #FFB6C1;
+    --cor-marrom: #5C4033;
+    --cor-creme: #FFFDD0;
+    --cor-branca: #FFFFFF;
+}
+
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--cor-creme);
+    color: var(--cor-marrom);
+    line-height: 1.6;
+}
+
+/* 1. Header Fixo e Vidro Fosco (Glassmorphism) */
+header {
+    position: sticky;
+    top: 0;
+    /* Fundo translúcido */
+    background-color: rgba(255, 253, 208, 0.7); 
+    /* Filtro de desfoque */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 100;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid var(--cor-rosa);
+}
+
+header h1 {
+    color: var(--cor-rosa);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Layout Principal */
+main {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.secao-padrao {
+    background-color: var(--cor-branca);
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+h2 {
+    color: var(--cor-marrom);
+    border-bottom: 2px solid var(--cor-rosa);
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+/* 2. Grid do Cardápio */
+.cardapio {
+    display: grid;
+    /* 3 Colunas no Desktop */
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+}
+
+.card {
+    background-color: var(--cor-creme);
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid var(--cor-rosa);
+}
+
+.destaque {
+    /* Ocupa da primeira até a última linha (todas as colunas) */
+    grid-column: 1 / -1; 
+    background-color: var(--cor-rosa);
+}
+
+/* Estilização de Detalhes (FAQ) */
+details {
+    background-color: var(--cor-creme);
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--cor-rosa);
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+details p {
+    margin-top: 10px;
+}
+
+/* Formulário */
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="date"],
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+fieldset {
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px solid var(--cor-rosa);
+    border-radius: 5px;
+}
+
+fieldset label {
+    display: inline;
+    font-weight: normal;
+    margin-right: 20px;
+    margin-left: 5px;
+}
+
+/* 3. Botão com Transição e Hover */
+.btn-pedido {
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    background-color: var(--cor-rosa);
+    color: var(--cor-marrom);
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    /* Prepara a suavidade da animação */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-pedido:hover {
+    /* Cresce o botão suavemente */
+    transform: scale(1.05);
+    background-color: #ff9eaa;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--cor-marrom);
+    color: var(--cor-creme);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer a {
+    color: var(--cor-rosa);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* 4. Media Query para Celulares */
+@media (max-width: 768px) {
+    .cardapio {
+        /* Passa a ter 1 coluna em telas menores que 768px */
+        grid-template-columns: 1fr;
+    }
+}

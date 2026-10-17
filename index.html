@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doce Sabor</title>
+    <!-- Ligação correta com o arquivo dentro da pasta css -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    
+    <!-- Cabeçalho com Glassmorphism (feito no CSS) -->
+    <header>
+        <h1>Doce Sabor</h1>
+        <p>A melhor confeitaria do seu bairro!</p>
+    </header>
+
+    <main>
+        <!-- Bolo do mês -->
+        <section class="secao-padrao">
+            <article class="bolo-mes">
+                <h2>Bolo do mês</h2>
+                <h3>Bolo de pote de Ninho com morango</h3>
+                <p><strong>Válido até 31 de outubro</strong></p>
+            </article>
+        </section>
+
+        <!-- Cardápio usando CSS Grid -->
+        <section class="secao-padrao">
+            <h2>Nosso Cardápio</h2>
+            <div class="cardapio">
+                <article class="card">
+                    <h3>Bolo de Chocolate</h3>
+                    <p>O clássico com cobertura especial belga.</p>
+                </article>
+                <article class="card">
+                    <h3>Bolo de Morango</h3>
+                    <p>Massa fofinha e muito recheio fresco.</p>
+                </article>
+                <article class="card">
+                    <h3>Bolo de Cenoura</h3>
+                    <p>Com bastante brigadeiro derretido.</p>
+                </article>
+                <!-- Destaque que ocupa todas as colunas -->
+                <article class="card destaque">
+                    <h3>Kit Festa</h3>
+                    <p>Bolo + Docinhos + Salgados. O pacote completo para sua festa!</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Perguntas Frequentes (Sem JS) -->
+        <section class="secao-padrao">
+            <h2>Perguntas Frequentes</h2>
+            <details>
+                <summary>Vocês fazem entrega?</summary>
+                <p>Sim! Entregamos em um raio de até 15km da nossa loja.</p>
+            </details>
+            <details open>
+                <summary>Aceitam Pix?</summary>
+                <p>Sim, aceitamos Pix, cartões de crédito e débito.</p>
+            </details>
+        </section>
+
+        <!-- Formulário de Encomenda -->
+        <section class="secao-padrao">
+            <h2>Faça sua Encomenda</h2>
+            <form action="/encomendas" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <!-- Select com os sabores -->
+                <label for="sabor">Sabor do bolo:</label>
+                <select id="sabor" name="sabor">
+                    <option value="chocolate">Chocolate</option>
+                    <option value="morango">Morango</option>
+                    <option value="cenoura">Cenoura com Brigadeiro</option>
+                </select>
+
+                <!-- Input de data -->
+                <label for="data_retirada">Data de retirada:</label>
+                <input type="date" id="data_retirada" name="data_retirada" required>
+
+                <!-- Fieldset para os radio buttons (mesmo name) -->
+                <fieldset>
+                    <legend>Forma de recebimento:</legend>
+                    <input type="radio" id="retirar_loja" name="recebimento" value="loja" required>
+                    <label for="retirar_loja">Retirar na loja</label>
+
+                    <input type="radio" id="entrega" name="recebimento" value="entrega">
+                    <label for="entrega">Entrega</label>
+                </fieldset>
+
+                <button type="submit" class="btn-pedido">Fazer pedido</button>
+            </form>
+        </section>
+
+        <!-- Mapa -->
+        <section class="secao-padrao">
+            <h2>Onde Estamos</h2>
+            <!-- Iframe com o atributo title para acessibilidade -->
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d233875.61119158383!2d-47.099441705468706!3d-23.664997399999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce53ceac17f93b%3A0x3546a122a212c20e!2sDoce%20Sabor%20Confeitaria%20A!5e0!3m2!1spt-BR!2sbr!4v1792253892923!5m2!1spt-BR!2sbr" 
+                width="100%" 
+                height="300" 
+                style="border:0; border-radius: 8px;" 
+                allowfullscreen="" 
+                loading="lazy"
+                title="Mapa de localização da loja Doce Sabor">
+            </iframe>
+        </section>
+    </main>
+
+    <!-- Rodapé Semântico com Contatos Especiais -->
+    <footer>
+        <address>
+            <p>&copy; 2026 Doce Sabor</p>
+            <p>E-mail: <a href="mailto:contato@docesabor.com">contato@docesabor.com</a></p>
+            <p>Telefone: <a href="tel:+551140001234">(11) 4000-1234</a></p>
+        </address>
+    </footer>
+
+</body>
+</html>
